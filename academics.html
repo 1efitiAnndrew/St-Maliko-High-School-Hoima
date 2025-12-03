@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Academics - St Maliko High School Hoima | Excellence in Education</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="St Maliko High School Hoima academics, O-Level A-Level Uganda, science arts curriculum, academic departments, school facilities, UNEB performance" name="keywords">
+    <meta content="Explore academic excellence at St Maliko High School Hoima. Our comprehensive O-Level and A-Level programs, modern facilities, and proven UNEB performance record." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #4a6bff;
+            --secondary-color: #00c9a7;
+            --accent-color: #ff6b6b;
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /* Hero Section */
+        .academic-hero {
+            position: relative;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.85)), url('img/academics-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0 80px;
+            color: white;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .academic-badge {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(74, 107, 255, 0.3);
+            margin-bottom: 20px;
+        }
+        
+        /* Academic Programs */
+        .program-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            height: 100%;
+            position: relative;
+        }
+        
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+        
+        .program-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .program-level {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        /* Department Cards */
+        .department-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 2px solid transparent;
+        }
+        
+        .department-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: var(--primary-color);
+        }
+        
+        .department-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+        
+        .department-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .subject-badge {
+            background: rgba(74, 107, 255, 0.1);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            margin: 3px;
+            display: inline-block;
+        }
+        
+        /* Timeline */
+        .academic-timeline {
+            position: relative;
+            padding: 0;
+        }
+        
+        .academic-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            width: 50%;
+            padding: 0 40px;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+        .timeline-date {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            transform: rotate(45deg);
+            box-shadow: 2px -2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::after {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            transform: rotate(45deg);
+            box-shadow: -2px 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        /* Facilities */
+        .facility-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .facility-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .facility-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .facility-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        /* Performance Stats */
+        .stat-card {
+            background: linear-gradient(135deg, var(--dark-color), #16213e);
+            color: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Grading Table */
+        .grading-table {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        
+        .table-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+        
+        /* CTA Section */
+        .academic-cta {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .academic-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('img/pattern-light.png');
+            opacity: 0.1;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .academic-hero {
+                padding: 100px 0 60px;
+                min-height: 50vh;
+            }
+            
+            .academic-timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 70px;
+                padding-right: 25px;
+                text-align: left !important;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content::after,
+            .timeline-item:nth-child(even) .timeline-content::after {
+                left: -10px;
+                right: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top py-3">
+        <div class="container">
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <div class="bg-primary rounded-circle p-2 me-3">
+                    <i class="fas fa-graduation-cap text-white fa-2x"></i>
+                </div>
+                <div>
+                    <h4 class="mb-0 text-primary fw-bold">St Maliko High School</h4>
+                    <small class="text-muted">Hoima, Uganda</small>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto align-items-center">
+                    <a href="index.html" class="nav-item nav-link px-3">Home</a>
+                    <a href="about.html" class="nav-item nav-link px-3">About</a>
+                    <a href="academics.html" class="nav-item nav-link px-3 active">Academics</a>
+                    <a href="sports.html" class="nav-item nav-link px-3">Sports</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle px-3" data-bs-toggle="dropdown">More</a>
+                        <div class="dropdown-menu border-0 rounded shadow">
+                            <a href="team.html" class="dropdown-item">Our Team</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+                            <a href="gallery.html" class="dropdown-item">Gallery</a>
+                            <a href="contact.html" class="dropdown-item">Contact</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link px-3">Contact</a>
+                    <a href="admission.html" class="btn btn-primary ms-3">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section -->
+    <section class="academic-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="academic-badge">
+                        <i class="fas fa-award"></i> Excellence in Education Since 2018
+                    </div>
+                    <h1 class="display-2 fw-bold text-white mb-4">Academic <span class="text-warning">Excellence</span> Redefined</h1>
+                    <p class="lead text-light mb-4">At St Maliko High School, we offer comprehensive O-Level and A-Level programs designed to nurture intellectual curiosity, critical thinking, and practical skills for real-world success.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#programs" class="btn btn-warning btn-lg">
+                            <i class="fas fa-graduation-cap me-2"></i>View Programs
+                        </a>
+                        <a href="admission.html" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-user-graduate me-2"></i>Apply Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Programs -->
+    <section id="programs" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Our Programs</h6>
+                <h2 class="display-4 fw-bold mb-3">Academic <span style="background: linear-gradient(135deg, #4a6bff, #00c9a7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Structure</span></h2>
+                <p class="lead">Comprehensive education from O-Level to A-Level</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="program-card">
+                        <div class="position-relative">
+                            <img src="img/olevel-program.jpg" class="program-img" alt="O-Level Program">
+                            <div class="program-level">Ordinary Level</div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="mb-3">O-Level Program (S1-S4)</h3>
+                            <p class="text-muted mb-4">Four-year comprehensive program following the Uganda National Curriculum, preparing students for Uganda Certificate of Education (UCE) examinations.</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6 class="text-primary mb-2">Core Subjects:</h6>
+                                    <ul class="text-muted small">
+                                        <li>Mathematics</li>
+                                        <li>English Language</li>
+                                        <li>Biology</li>
+                                        <li>Chemistry</li>
+                                        <li>Physics</li>
+                                        <li>Geography</li>
+                                        <li>History</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-primary mb-2">Elective Options:</h6>
+                                    <ul class="text-muted small">
+                                        <li>Entrepreneurship</li>
+                                        <li>Computer Studies</li>
+                                        <li>Religious Education</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="program-card">
+                        <div class="position-relative">
+                            <img src="img/alevel-program.jpg" class="program-img" alt="A-Level Program">
+                            <div class="program-level">Advanced Level</div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="mb-3">A-Level Program (S5-S6)</h3>
+                            <p class="text-muted mb-4">Two-year specialized program offering Science and Arts combinations, preparing students for Uganda Advanced Certificate of Education (UACE).</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6 class="text-primary mb-2">Science Combinations:</h6>
+                                    <ul class="text-muted small">
+                                        <li>PCM (Physics, Chemistry, Maths)</li>
+                                        <li>PCB (Physics, Chemistry, Biology)</li>
+                                        <li>BCM (Biology, Chemistry, Maths)</li>
+                                        <li>MEG (Maths, Economics, Geography)</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-primary mb-2">Arts Combinations:</h6>
+                                    <ul class="text-muted small">
+                                        <li>HGL (History, Geography, Literature)</li>
+                                        <li>LEA (Literature, Economics, Art)</li>
+                                        <li>HED (History, Economics, Divinity)</li>
+                                        <li>GEP (Geography, Economics, Politics)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Expert Faculty</h6>
+                <h2 class="display-4 fw-bold mb-3">Academic <span style="background: linear-gradient(135deg, #4a6bff, #00c9a7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Departments</span></h2>
+                <p class="lead">Specialized departments for comprehensive learning</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="department-card">
+                        <div class="department-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h4 class="mb-3">Sciences Department</h4>
+                        <p class="text-muted mb-3">Comprehensive science education with modern laboratories and experienced teachers.</p>
+                        <div class="mb-3">
+                            <span class="subject-badge">Biology</span>
+                            <span class="subject-badge">Chemistry</span>
+                            <span class="subject-badge">Physics</span>
+                            <span class="subject-badge">Mathematics</span>
+                            <span class="subject-badge">Agriculture</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="department-card">
+                        <div class="department-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h4 class="mb-3">Arts & Humanities</h4>
+                        <p class="text-muted mb-3">Developing critical thinking and creative expression through comprehensive arts education.</p>
+                        <div class="mb-3">
+                            <span class="subject-badge">History</span>
+                            <span class="subject-badge">Geography</span>
+                            <span class="subject-badge">Literature</span>
+                            <span class="subject-badge">Economics</span>
+                            <span class="subject-badge">Entrepreneurship</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="department-card">
+                        <div class="department-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h4 class="mb-3">ICT Department</h4>
+                        <p class="text-muted mb-3">Preparing students for the digital age with modern computer labs and IT training.</p>
+                        <div class="mb-3">
+                            <span class="subject-badge">Computer Studies</span>
+                            <span class="subject-badge">ICT Practicals</span>
+                            <span class="subject-badge">Digital Literacy</span>
+                            <span class="subject-badge">Programming</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="department-card">
+                        <div class="department-icon">
+                            <i class="fas fa-language"></i>
+                        </div>
+                        <h4 class="mb-3">Languages Department</h4>
+                        <p class="text-muted mb-3">Developing communication skills in English and local languages for effective expression.</p>
+                        <div class="mb-3">
+                            <span class="subject-badge">English</span>
+                            <span class="subject-badge">Luganda</span>
+                            <span class="subject-badge">Runyoro</span>
+                            <span class="subject-badge">French</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Calendar -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Academic Year 2025</h6>
+                <h2 class="display-4 fw-bold mb-3">Academic <span style="background: linear-gradient(135deg, #4a6bff, #00c9a7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Calendar</span></h2>
+            </div>
+            
+            <div class="academic-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Term 1: Feb 5 - Apr 27</span>
+                        <h5 class="mb-2">First Term Activities</h5>
+                        <ul class="text-muted mb-0">
+                            <li>Orientation & Registration (Feb 5-10)</li>
+                            <li>Mid-term Tests (Mar 15-20)</li>
+                            <li>End of Term Exams (Apr 22-26)</li>
+                            <li>Closing Date: April 27, 2025</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Term 2: May 20 - Aug 23</span>
+                        <h5 class="mb-2">Second Term Activities</h5>
+                        <ul class="text-muted mb-0">
+                            <li>Career Guidance Week (June 10-14)</li>
+                            <li>Inter-house Competitions (July 1-5)</li>
+                            <li>Parents' Day (July 15)</li>
+                            <li>Mid-term Break (July 20-25)</li>
+                            <li>Closing Date: August 23, 2025</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">Term 3: Sep 9 - Nov 30</span>
+                        <h5 class="mb-2">Third Term Activities</h5>
+                        <ul class="text-muted mb-0">
+                            <li>Mock Examinations (Sep 15-30)</li>
+                            <li>Final UNEB Preparations (Oct 1-14)</li>
+                            <li>UNEB Exams Start: October 15</li>
+                            <li>Closing Date: November 30, 2025</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assessment System -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <h6 class="text-primary fw-bold text-uppercase mb-3">Evaluation System</h6>
+                    <h2 class="display-5 fw-bold mb-4">Comprehensive <span style="background: linear-gradient(135deg, #4a6bff, #00c9a7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Assessment</span></h2>
+                    <p class="lead mb-4">Our balanced assessment system ensures fair evaluation and continuous improvement.</p>
+                    
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                                    <i class="fas fa-chart-line text-primary fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Continuous Assessment</h5>
+                                    <p class="text-muted mb-0">40% of final grade</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                                    <i class="fas fa-file-alt text-primary fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Terminal Examinations</h5>
+                                    <p class="text-muted mb-0">60% of final grade</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="grading-table">
+                        <div class="table-header p-3">
+                            <h5 class="mb-0 text-white">Grading Scale System</h5>
+                        </div>
+                        <div class="p-0">
+                            <table class="table table-hover mb-0">
+                                <thead class="bg-light">
+                                    <tr>
+                                        <th class="border-0">Score Range</th>
+                                        <th class="border-0">Grade</th>
+                                        <th class="border-0">Points</th>
+                                        <th class="border-0">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>90-100%</td>
+                                        <td><span class="badge bg-success">A</span></td>
+                                        <td>9</td>
+                                        <td>Distinction</td>
+                                    </tr>
+                                    <tr>
+                                        <td>80-89%</td>
+                                        <td><span class="badge bg-primary">B</span></td>
+                                        <td>8</td>
+                                        <td>Excellent</td>
+                                    </tr>
+                                    <tr>
+                                        <td>70-79%</td>
+                                        <td><span class="badge bg-info">C</span></td>
+                                        <td>7</td>
+                                        <td>Very Good</td>
+                                    </tr>
+                                    <tr>
+                                        <td>60-69%</td>
+                                        <td><span class="badge bg-warning">D</span></td>
+                                        <td>6</td>
+                                        <td>Good</td>
+                                    </tr>
+                                    <tr>
+                                        <td>50-59%</td>
+                                        <td><span class="badge bg-secondary">E</span></td>
+                                        <td>5</td>
+                                        <td>Pass</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Learning Environment</h6>
+                <h2 class="display-4 fw-bold mb-3">Academic <span style="background: linear-gradient(135deg, #4a6bff, #00c9a7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Facilities</span></h2>
+                <p class="lead">State-of-the-art facilities for optimal learning experience</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="facility-card">
+                        <div class="position-relative">
+                            <img src="img/lib1.jpeg" class="facility-img" alt="Modern Library">
+                            <div class="facility-badge">Library</div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="mb-2">Modern Library</h5>
+                            <p class="text-muted mb-3">Well-stocked with over 10,000 books, digital resources, and quiet study areas with free Wi-Fi access.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted"><i class="fas fa-clock me-1"></i>7am - 9pm Daily</small>
+                                <small class="text-muted"><i class="fas fa-users me-1"></i>50 Seats</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="facility-card">
+                        <div class="position-relative">
+                            <img src="img/lab1.jpeg" class="facility-img" alt="Science Lab">
+                            <div class="facility-badge">Laboratory</div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="mb-2">Science Laboratories</h5>
+                            <p class="text-muted mb-3">Fully equipped labs for Physics, Chemistry, and Biology with modern equipment and safety protocols.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted"><i class="fas fa-flask me-1"></i>3 Labs</small>
+                                <small class="text-muted"><i class="fas fa-user-friends me-1"></i>30 Capacity</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="facility-card">
+                        <div class="position-relative">
+                            <img src="img/home2.jpeg" class="facility-img" alt="Computer Lab">
+                            <div class="facility-badge">ICT Center</div>
+                        </div>
+                        <div class="p-4">
+                            <h5 class="mb-2">Computer Laboratory</h5>
+                            <p class="text-muted mb-3">40 modern computers with high-speed internet, latest software, and IT training facilities.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted"><i class="fas fa-desktop me-1"></i>40 Units</small>
+                                <small class="text-muted"><i class="fas fa-wifi me-1"></i>High-speed</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Statistics -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Our Track Record</h6>
+                <h2 class="display-4 fw-bold mb-3">Academic <span style="background: linear-gradient(135deg, #4a6bff, #00c9a7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Performance</span></h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="98">98%</div>
+                        <h5 class="text-light">UNEB Pass Rate</h5>
+                        <p class="text-light mb-0">Average over last 5 years</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="85">85%</div>
+                        <h5 class="text-light">First Grades</h5>
+                        <p class="text-light mb-0">Division 1 & 2 Achievements</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="92">92%</div>
+                        <h5 class="text-light">University Admissions</h5>
+                        <p class="text-light mb-0">To Higher Institutions</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="45">45+</div>
+                        <h5 class="text-light">Academic Awards</h5>
+                        <p class="text-light mb-0">National & Regional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="academic-cta">
+        <div class="container position-relative">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold text-white mb-4">Start Your Academic <span class="text-warning">Journey</span> With Us</h2>
+                    <p class="lead text-white mb-5">Join St Maliko High School for quality education, modern facilities, and proven academic excellence.</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="admission.html" class="btn btn-light btn-lg">
+                            <i class="fas fa-file-alt me-2"></i>Apply for Admission
+                        </a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-calendar-alt me-2"></i>Schedule Visit
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a href="index.html" class="text-decoration-none">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary rounded-circle p-3 me-3">
+                                <i class="fas fa-graduation-cap text-white fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white mb-0">St Maliko High School</h4>
+                                <small class="text-light">Hoima, Uganda</small>
+                            </div>
+                        </div>
+                    </a>
+                    <p class="mb-4">Excellence in academics with comprehensive O-Level and A-Level programs, modern facilities, and proven track record of success.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-light text-decoration-none">About</a></li>
+                        <li class="mb-2"><a href="academics.html" class="text-light text-decoration-none">Academics</a></li>
+                        <li class="mb-2"><a href="admission.html" class="text-light text-decoration-none">Admissions</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>Hoima City, Bujumbura, Uganda</p>
+                    <p class="mb-2"><i class="fas fa-phone-alt me-2"></i>+256 779 625516</p>
+                    <p class="mb-2"><i class="fas fa-phone-alt me-2"></i>+256 777 211342</p>
+                    <p class="mb-2"><i class="fas fa-envelope me-2"></i>Smalikschoolhoima@gmail.com</p>
+                    <p><i class="fas fa-clock me-2"></i>Office: 8:00 AM - 5:00 PM</p>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-4">Academic Newsletter</h5>
+                    <p>Subscribe for academic updates, exam schedules, and school news.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email address">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 St Maliko High School Hoima. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> by <a href="mailto:efitiandrew@gmail.com" class="text-light text-decoration-none">Efiti Andrew</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg rounded-circle back-to-top position-fixed" style="bottom: 30px; right: 30px;">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Counter Animation
+        $(document).ready(function() {
+            $('.stat-number').each(function() {
+                var $this = $(this);
+                var countTo = parseInt($this.attr('data-count'));
+                
+                $({ countNum: 0 }).animate({
+                    countNum: countTo
+                },
+                {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function() {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function() {
+                        $this.text(this.countNum);
+                    }
+                });
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all cards
+        document.querySelectorAll('.program-card, .department-card, .facility-card, .stat-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+
+</html>

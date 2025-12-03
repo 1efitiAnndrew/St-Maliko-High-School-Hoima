@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>St Maliko High School Hoima</title>
+    <title>St Maliko High School Hoima | Premier Education in Western Uganda</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="St Maliko High School Hoima, quality education Uganda, secondary school Hoima, O-Level A-Level, boarding school, best school Hoima" name="keywords">
+    <meta content="St Maliko High School Hoima offers premier O-Level and A-Level education with modern facilities, experienced teachers, and holistic development programs in Hoima City." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -14,7 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -29,6 +29,261 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #4a6bff;
+            --secondary-color: #00c9a7;
+            --accent-color: #ff6b6b;
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .hero-slide {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            overflow: hidden;
+        }
+        
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: zoomIn 20s infinite alternate;
+        }
+        
+        @keyframes zoomIn {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+        
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.85) 0%, rgba(74, 107, 255, 0.7) 100%);
+            z-index: 1;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            height: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color: var(--primary-color);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .feature-icon i {
+            font-size: 1.8rem;
+            color: white;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .btn-gradient {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            color: white;
+            padding: 12px 35px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-gradient:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(74, 107, 255, 0.3);
+            color: white;
+        }
+        
+        .academic-badge {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .stats-counter {
+            background: linear-gradient(135deg, var(--dark-color), #16213e);
+            color: white;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats-counter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('img/pattern.png');
+            opacity: 0.1;
+        }
+        
+        .stat-item {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .facility-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .facility-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .facility-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -30px;
+            left: 30px;
+            font-size: 5rem;
+            color: var(--primary-color);
+            opacity: 0.2;
+            font-family: serif;
+        }
+        
+        .testimonial-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-color);
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('img/pattern-light.png');
+            opacity: 0.1;
+        }
+        
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        
+        .nav-logo-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .nav-logo-icon i {
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+            backdrop-filter: blur(10px);
+            z-index: -1;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-slide {
+                height: 70vh;
+                min-height: 500px;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -40,39 +295,47 @@
     </div>
     <!-- Spinner End -->
 
-
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>St Maliko High School Hoima</h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="courses.html" class="nav-item nav-link">Courses</a>
-                <a href="sports.html" class="nav-item nav-link">Sports</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top py-3">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">
+                    <i class="fas fa-graduation-cap"></i>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <div>
+                    <h4 class="mb-0 text-primary fw-bold">St Maliko High School</h4>
+                    <small class="text-muted">Hoima, Uganda</small>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto align-items-center">
+                    <a href="index.html" class="nav-item nav-link px-3 active">Home</a>
+                    <a href="about.html" class="nav-item nav-link px-3">About</a>
+                    <a href="academics.html" class="nav-item nav-link px-3">Academics</a>
+                    <a href="admissions.html" class="nav-item nav-link px-3">Admissions</a>
+                    <a href="sports.html" class="nav-item nav-link px-3">Sports</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle px-3" data-bs-toggle="dropdown">More</a>
+                        <div class="dropdown-menu border-0 rounded shadow">
+                            <a href="team.html" class="dropdown-item">Our Team</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+                            <a href="gallery.html" class="dropdown-item">Gallery</a>
+                            <a href="contact.html" class="dropdown-item">Contact</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link px-3">Contact</a>
+                    <a href="admission.html" class="btn btn-gradient ms-3">Apply Now</a>
+                </div>
             </div>
-            
         </div>
     </nav>
     <!-- Navbar End -->
 
-
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-5">
+    <!-- Hero Section -->
+     <div class="container-fluid p-0 mb-5">
         <div class="owl-carousel header-carousel position-relative">
             <div class="owl-carousel-item position-relative">
                 <img class="img-fluid" src="img/home1.jpeg" alt="" style="max-height: 600px; object-fit: cover;">
@@ -127,471 +390,380 @@
     <!-- Carousel End -->
 
 
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
+    <!-- Quick Stats -->
+    <div class="stats-counter">
         <div class="container">
             <div class="row g-4">
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h5 class="mb-3">Skilled and experienced teachers</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="98">98%</div>
+                        <h5 class="text-light">Pass Rate</h5>
+                        <p class="text-light mb-0">UNEB Examination Success</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="25">25+</div>
+                        <h5 class="text-light">Years</h5>
+                        <p class="text-light mb-0">Of Educational Excellence</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="50">50+</div>
+                        <h5 class="text-light">Teachers</h5>
+                        <p class="text-light mb-0">Qualified & Experienced</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="2000">2000+</div>
+                        <h5 class="text-light">Graduates</h5>
+                        <p class="text-light mb-0">Successful Alumni</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="container py-5 my-5">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h4 class="mb-3">Expert Faculty</h4>
+                    <p class="text-muted">Our team of qualified and experienced teachers provides personalized attention and modern teaching methodologies to ensure academic excellence.</p>
+                    <a href="team.html" class="text-primary text-decoration-none">Meet Our Teachers →</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h4 class="mb-3">Modern Facilities</h4>
+                    <p class="text-muted">State-of-the-art laboratories, computer labs, library, and sports facilities provide an enriching environment for holistic development.</p>
+                    <a href="facilities.html" class="text-primary text-decoration-none">View Facilities →</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h4 class="mb-3">Holistic Development</h4>
+                    <p class="text-muted">We nurture students academically, spiritually, and socially through various clubs, sports, and leadership programs.</p>
+                    <a href="sports.html" class="text-primary text-decoration-none">Explore Programs →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="position-relative">
+                    <img src="img/welcome1.jpeg" alt="St Maliko High School Welcome" class="img-fluid rounded shadow-lg" style="height: 500px; width: 100%; object-fit: cover;">
+                    <div class="position-absolute bottom-0 end-0 bg-primary text-white p-4 rounded-start" style="transform: translateY(50%);">
+                        <h3 class="mb-0">Since 2018</h3>
+                        <p class="mb-0">Building Excellence</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h6 class="text-primary fw-bold text-uppercase mb-3">About Our School</h6>
+                <h2 class="display-5 fw-bold mb-4">Where Excellence Meets <span class="gradient-text">Character</span></h2>
+                <p class="lead mb-4">St Maliko High School Hoima has been a beacon of quality education in Western Uganda for over 25 years, offering comprehensive O-Level and A-Level programs.</p>
+                
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                            <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                                <i class="fas fa-check text-primary"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Fully Accredited</h6>
+                                <small class="text-muted">Ministry of Education Registered</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                            <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                                <i class="fas fa-check text-primary"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Dual Curriculum</h6>
+                                <small class="text-muted">O-Level & A-Level Programs</small>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item text-center pt-3">
+                
+                <p class="mb-4">Our commitment to academic excellence, combined with character building and spiritual development, prepares students for success in higher education and life.</p>
+                
+                <a href="about.html" class="btn btn-gradient">Learn More About Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Academic Programs -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Academic Excellence</h6>
+                <h2 class="display-5 fw-bold mb-3">Our <span class="gradient-text">Academic</span> Programs</h2>
+                <p class="lead">Comprehensive education designed for success</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="facility-card">
+                        <div class="position-relative">
+                            <img src="img/olevel.jpg" class="img-fluid facility-img" alt="O-Level Program">
+                            <div class="position-absolute top-0 start-0 m-3">
+                                <span class="academic-badge">Ordinary Level</span>
+                            </div>
+                        </div>
                         <div class="p-4">
-                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                            <h5 class="mb-3">Online Classes</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                            <h4 class="mb-3">O-Level Program (S1-S4)</h4>
+                            <p class="text-muted mb-3">Comprehensive four-year program covering core subjects and electives, preparing students for Uganda Certificate of Education (UCE) examinations.</p>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <span class="badge bg-primary">Mathematics</span>
+                                <span class="badge bg-primary">English</span>
+                                <span class="badge bg-primary">Sciences</span>
+                                <span class="badge bg-primary">Humanities</span>
+                            </div>
+                            <a href="academics.html#olevel" class="btn btn-outline-primary">Explore O-Level</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-home text-primary mb-4"></i>
-                            <h5 class="mb-3">New cirriculum class projects</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                
+                <div class="col-lg-6">
+                    <div class="facility-card">
+                        <div class="position-relative">
+                            <img src="img/alevel.jpg" class="img-fluid facility-img" alt="A-Level Program">
+                            <div class="position-absolute top-0 start-0 m-3">
+                                <span class="academic-badge">Advanced Level</span>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item text-center pt-3">
                         <div class="p-4">
-                            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
-                            <h5 class="mb-3">Book Library</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                            <h4 class="mb-3">A-Level Program (S5-S6)</h4>
+                            <p class="text-muted mb-3">Specialized two-year program with Science and Arts combinations, preparing students for Uganda Advanced Certificate of Education (UACE).</p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6 class="text-primary">Science Combinations:</h6>
+                                    <ul class="text-muted small">
+                                        <li>PCM (Physics, Chemistry, Maths)</li>
+                                        <li>PCB (Physics, Chemistry, Biology)</li>
+                                        <li>BCM (Biology, Chemistry, Maths)</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-primary">Arts Combinations:</h6>
+                                    <ul class="text-muted small">
+                                        <li>HGL (History, Geography, Lit)</li>
+                                        <li>LEA (Literature, Economics, Art)</li>
+                                        <li>HED (History, Economics, Divinity)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="academics.html#alevel" class="btn btn-outline-primary">Explore A-Level</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Service End -->
 
+    <!-- Facilities Section -->
+    <div class="container py-5 my-5">
+        <div class="text-center mb-5">
+            <h6 class="text-primary fw-bold text-uppercase">Modern Infrastructure</h6>
+            <h2 class="display-5 fw-bold mb-3">Our <span class="gradient-text">Facilities</span></h2>
+            <p class="lead">Creating an environment conducive to learning and growth</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="facility-card text-center p-4">
+                    <div class="feature-icon mx-auto mb-3">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h5 class="mb-3">Science Labs</h5>
+                    <p class="text-muted mb-0">Fully equipped laboratories for Physics, Chemistry, and Biology with modern equipment and safety measures.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="facility-card text-center p-4">
+                    <div class="feature-icon mx-auto mb-3">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h5 class="mb-3">Computer Lab</h5>
+                    <p class="text-muted mb-0">Modern computer lab with high-speed internet, latest software, and IT training for digital literacy.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="facility-card text-center p-4">
+                    <div class="feature-icon mx-auto mb-3">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h5 class="mb-3">Library</h5>
+                    <p class="text-muted mb-0">Well-stocked library with extensive collection of books, reference materials, and quiet study areas.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="facility-card text-center p-4">
+                    <div class="feature-icon mx-auto mb-3">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <h5 class="mb-3">Sports Complex</h5>
+                    <p class="text-muted mb-0">Football field, basketball court, volleyball court, and athletics track for physical development.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- About Start -->
-    <div class="container-xxl py-5">
+    <!-- Testimonials -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Success Stories</h6>
+                <h2 class="display-5 fw-bold mb-3">What <span class="gradient-text">Parents & Students</span> Say</h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="img/testimonial-1.jpg" class="testimonial-img me-3" alt="Alinda Peter">
+                            <div>
+                                <h5 class="mb-1">Alinda Peter</h5>
+                                <p class="text-muted mb-0">Parent</p>
+                            </div>
+                        </div>
+                        <p class="mb-0">"St Maliko High School transformed my son from an average student to a confident young man. The teachers' dedication and the school's discipline system are exceptional."</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="img/testimonial-2.jpg" class="testimonial-img me-3" alt="Amanyire Shivan">
+                            <div>
+                                <h5 class="mb-1">Amanyire Shivan</h5>
+                                <p class="text-muted mb-0">Student</p>
+                            </div>
+                        </div>
+                        <p class="mb-0">"The supportive learning environment and excellent teachers helped me achieve 8 distinctions in my O-Level. I'm now pursuing Medicine at Makerere University."</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="img/testimonial-3.jpg" class="testimonial-img me-3" alt="Akol Peter">
+                            <div>
+                                <h5 class="mb-1">Akol Peter</h5>
+                                <p class="text-muted mb-0">Student</p>
+                            </div>
+                        </div>
+                        <p class="mb-0">"The computer lab facilities and IT training gave me skills that are helping me in my Software Engineering degree. St Maliko prepared me for the digital world."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+        <div class="container position-relative">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-4">Ready to Join Our <span class="text-warning">Academic</span> Community?</h2>
+                    <p class="lead mb-5">Applications are open for the 2025 academic year. Limited spaces available for O-Level and A-Level programs.</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="admission.html" class="btn btn-light btn-lg">
+                            <i class="fas fa-file-alt me-2"></i>Apply Now
+                        </a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-calendar-alt me-2"></i>Schedule Visit
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
         <div class="container">
             <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 600px;">
-                    <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="img/welcome1.jpg" alt="" style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
-                    <h1 class="mb-4">Welcome to St Maliko High School Hoima</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <div class="row gy-2 gx-4 mb-4">
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled and experienced teacher</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled experienced teachers</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
-                        </div>
-                    </div>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
-
-
-    <!-- Categories Start -->
-    <div class="container-xxl py-5 category">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Categories</h6>
-                <h1 class="mb-5">We offer both Arts and Sciences</h1>
-            </div>
-            <div class="row g-3">
-                <div class="col-lg-7 col-md-6">
-                    <div class="row g-3">
-                        <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="img/cat-1.jpg" alt="">
-                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Web Design</h5>
-                                    <small class="text-primary">49 Courses</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="img/cat-2.jpg" alt="">
-                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Graphic Design</h5>
-                                    <small class="text-primary">49 Courses</small>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
-                            <a class="position-relative d-block overflow-hidden" href="">
-                                <img class="img-fluid" src="img/cat-3.jpg" alt="">
-                                <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                    <h5 class="m-0">Video Editing</h5>
-                                    <small class="text-primary">49 Courses</small>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
-                    <a class="position-relative d-block h-100 overflow-hidden" href="">
-                        <img class="img-fluid position-absolute w-100 h-100" src="img/cat-4.jpg" alt="" style="object-fit: cover;">
-                        <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
-                            <h5 class="m-0">Online Marketing</h5>
-                            <small class="text-primary">49 Courses</small>
+                <div class="col-lg-4">
+                    <a href="index.html" class="text-decoration-none">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="nav-logo-icon me-3">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white mb-0">St Maliko High School</h4>
+                                <small class="text-light">Hoima, Uganda</small>
+                            </div>
                         </div>
                     </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Categories Start -->
-
-
-    <!-- Courses Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
-                <h1 class="mb-5">We highly empower our students with computer studies</h1>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="course-item bg-light">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/course-1.jpg" alt="">
-                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">$149.00</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small>(123)</small>
-                            </div>
-                            <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
-                        </div>
-                        <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
-                        </div>
+                    <p class="mb-4">Premier educational institution offering quality O-Level and A-Level education with modern facilities and experienced staff in Hoima City.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="course-item bg-light">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/course-2.jpg" alt="">
-                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">$149.00</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small>(123)</small>
-                            </div>
-                            <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
-                        </div>
-                        <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="course-item bg-light">
-                        <div class="position-relative overflow-hidden">
-                            <img class="img-fluid" src="img/course-3.jpg" alt="">
-                            <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                                <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4 pb-0">
-                            <h3 class="mb-0">$149.00</h3>
-                            <div class="mb-3">
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small class="fa fa-star text-primary"></small>
-                                <small>(123)</small>
-                            </div>
-                            <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
-                        </div>
-                        <div class="d-flex border-top">
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                            <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                            <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Courses End -->
-
-
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
-                <h1 class="mb-5">Our team of administrators</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Director</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Mr. Wandera Patrick</h5>
-                            <small>Headteacher</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Mr. Osbert</h5>
-                            <small>Dean of students</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0"> Tmwesigye Eunince</h5>
-                            <small>Head of sports</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
-
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="text-center">
-                <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
-                <h1 class="mb-5">Our Parents and Students Say!</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel position-relative">
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Alinda Peter</h5>
-                    <p>Parent</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Amanyire Shivan</h5>
-                    <p>Student</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Akol Peter</h5>
-                    <p>Student</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="border rounded-circle p-2 mx-auto mb-3" src="img/testimonial-4.jpg" style="width: 80px; height: 80px;">
-                    <h5 class="mb-0">Abdul Amlan</h5>
-                    <p>Parent</p>
-                    <div class="testimonial-text bg-light text-center p-4">
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
-        
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Quick Link</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">FAQs & Help</a>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="academics.html" class="text-light text-decoration-none">Academics</a></li>
+                        <li class="mb-2"><a href="admissions.html" class="text-light text-decoration-none">Admissions</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Hoima City, Bujumbura</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+256779625516</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+256777211342</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+256774994439</p>
-                   <p class="mb-2">
-    <i class="fa fa-envelope me-3"></i>
-    <a href="mailto:Smalikschoolhoima@gmail.com?subject=Inquiry&body=Hello, I would like to contact you about..." 
-       class="text-decoration-none">
-        Smalikschoolhoima@gmail.com
-    </a>
-</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                    <h5 class="mb-4">Contact Info</h5>
+                    <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>Hoima City, Bujumbura, Uganda</p>
+                    <p class="mb-2"><i class="fas fa-phone-alt me-2"></i>+256 779 625516</p>
+                    <p class="mb-2"><i class="fas fa-phone-alt me-2"></i>+256 777 211342</p>
+                    <p class="mb-2"><i class="fas fa-envelope me-2"></i>Smalikschoolhoima@gmail.com</p>
+                    <p><i class="fas fa-clock me-2"></i>Mon - Fri: 8:00 AM - 5:00 PM</p>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Gallery</h4>
-                    <div class="row g-2 pt-2">
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                <div class="col-lg-3">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p>Subscribe for school updates, events, and announcements.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email address">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">St Maliko High School Hoima</a>, All Right Reserved.
-
-                        <!--/*** The author’s attribution link must remain intact in the template. ***/-->
-                        <!--/*** If you wish to remove this credit link, please purchase the Pro Version . ***/-->
-                        Designed By <a class="border-bottom" href="https://efitiandrew@gmail.com">Efiti Andrew</a>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
-                        </div>
-                    </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 St Maliko High School Hoima. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> by <a href="mailto:efitiandrew@gmail.com" class="text-light text-decoration-none">Efiti Andrew</a></p>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Footer End -->
-
+    </footer>
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+    <a href="#" class="btn btn-primary btn-lg rounded-circle back-to-top position-fixed" style="bottom: 30px; right: 30px;">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -599,10 +771,58 @@
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    <script>
+        // Counter Animation
+        $(document).ready(function() {
+            $('.stat-number').each(function() {
+                var $this = $(this);
+                var countTo = $this.attr('data-count');
+                
+                $({ countNum: $this.text()}).animate({
+                    countNum: countTo
+                },
+                {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function() {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function() {
+                        $this.text(this.countNum);
+                    }
+                });
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Parallax effect for hero section
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero-slide img');
+            if (hero) {
+                hero.style.transform = 'scale(' + (1 + scrolled * 0.0005) + ')';
+            }
+        });
+    </script>
 </body>
 
 </html>

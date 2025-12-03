@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>St Maliko High School Hoima</title>
+    <title>Our Team | St Maliko High School Hoima - Leadership & Faculty</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="St Maliko High School team, faculty Hoima, school administration Uganda, headteacher, teachers, staff, leadership" name="keywords">
+    <meta content="Meet the dedicated leadership team and faculty of St Maliko High School Hoima. Our experienced administrators, teachers, and staff are committed to student success and academic excellence." name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -14,7 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -29,6 +29,268 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #4a6bff;
+            --secondary-color: #00c9a7;
+            --accent-color: #ff6b6b;
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /* Hero Section */
+        .team-hero {
+            position: relative;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.85)), url('img/team-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0 80px;
+            color: white;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Team Navigation */
+        .team-nav {
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 80px;
+            z-index: 1000;
+        }
+        
+        .team-nav-link {
+            color: var(--dark-color);
+            font-weight: 500;
+            padding: 15px 25px;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .team-nav-link:hover,
+        .team-nav-link.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+            background: rgba(74, 107, 255, 0.05);
+        }
+        
+        /* Team Cards */
+        .team-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            height: 100%;
+            position: relative;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+        
+        .team-img-container {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .team-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        
+        .team-card:hover .team-img {
+            transform: scale(1.05);
+        }
+        
+        .team-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .team-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 20px;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+        
+        .team-card:hover .team-overlay {
+            transform: translateY(0);
+        }
+        
+        /* Team Info */
+        .team-info {
+            padding: 25px;
+        }
+        
+        .team-qualification {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .team-department {
+            background: rgba(74, 107, 255, 0.1);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            display: inline-block;
+        }
+        
+        /* Social Links */
+        .team-social {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transform: translateX(100%);
+            transition: transform 0.4s ease;
+        }
+        
+        .team-card:hover .team-social {
+            transform: translateX(0);
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .social-icon:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Department Colors */
+        .admin-badge { background: linear-gradient(135deg, #4a6bff, #6c5ce7); }
+        .sciences-badge { background: linear-gradient(135deg, #00c9a7, #00b894); }
+        .arts-badge { background: linear-gradient(135deg, #ff6b6b, #e17055); }
+        .sports-badge { background: linear-gradient(135deg, #fd79a8, #e84393); }
+        .support-badge { background: linear-gradient(135deg, #fdcb6e, #e17055); }
+        
+        /* Team Stats */
+        .team-stats {
+            background: linear-gradient(135deg, var(--dark-color), #16213e);
+            color: white;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-stats::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('img/pattern.png');
+            opacity: 0.1;
+        }
+        
+        .stat-card {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* Message from Headteacher */
+        .headteacher-message {
+            background: linear-gradient(135deg, rgba(74, 107, 255, 0.05), rgba(0, 201, 167, 0.05));
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .headteacher-signature {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid rgba(74, 107, 255, 0.2);
+        }
+        
+        /* Modal Styling */
+        .team-modal-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .modal-qualification {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .team-hero {
+                padding: 100px 0 60px;
+                min-height: 50vh;
+            }
+            
+            .team-nav {
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            
+            .team-nav-link {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -40,306 +302,481 @@
     </div>
     <!-- Spinner End -->
 
-
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>St Maliko High School Hoima</h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="courses.html" class="nav-item nav-link">Courses</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <a href="team.html" class="dropdown-item active">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top py-3">
+        <div class="container">
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <div class="bg-primary rounded-circle p-2 me-3">
+                    <i class="fas fa-graduation-cap text-white fa-2x"></i>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <div>
+                    <h4 class="mb-0 text-primary fw-bold">St Maliko High School</h4>
+                    <small class="text-muted">Hoima, Uganda</small>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto align-items-center">
+                    <a href="index.html" class="nav-item nav-link px-3">Home</a>
+                    <a href="about.html" class="nav-item nav-link px-3">About</a>
+                    <a href="academics.html" class="nav-item nav-link px-3">Academics</a>
+                    <a href="sports.html" class="nav-item nav-link px-3">Sports</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle px-3 active" data-bs-toggle="dropdown">More</a>
+                        <div class="dropdown-menu border-0 rounded shadow">
+                            <a href="team.html" class="dropdown-item active">Our Team</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+                            <a href="gallery.html" class="dropdown-item">Gallery</a>
+                            <a href="contact.html" class="dropdown-item">Contact</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link px-3">Contact</a>
+                    <a href="admission.html" class="btn btn-primary ms-3">Apply Now</a>
+                </div>
             </div>
         </div>
     </nav>
     <!-- Navbar End -->
 
-
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary py-5 mb-5 page-header">
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">Our Team</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">Team</li>
-                        </ol>
-                    </nav>
+    <!-- Hero Section -->
+    <section class="team-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h6 class="text-warning fw-bold text-uppercase mb-3">Meet Our Team</h6>
+                    <h1 class="display-2 fw-bold text-white mb-4">Dedicated Minds, <span class="text-warning">Inspiring</span> Futures</h1>
+                    <p class="lead text-light mb-4">Our exceptional team of educators, administrators, and support staff are committed to nurturing the next generation of leaders, thinkers, and innovators.</p>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Header End -->
+    </section>
 
-
-    <!-- Team Start -->
-    <div class="container-xxl py-5">
+    <!-- Team Navigation -->
+    <div class="team-nav">
         <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
-                <h1 class="mb-5">Expert Instructors</h1>
+            <div class="d-flex justify-content-center flex-wrap">
+                <a href="#leadership" class="team-nav-link active" data-team="leadership">
+                    <i class="fas fa-user-tie me-2"></i>Leadership
+                </a>
+                <a href="#teachers" class="team-nav-link" data-team="teachers">
+                    <i class="fas fa-chalkboard-teacher me-2"></i>Teaching Staff
+                </a>
+                <a href="#administration" class="team-nav-link" data-team="administration">
+                    <i class="fas fa-users-cog me-2"></i>Administration
+                </a>
+                <a href="#support" class="team-nav-link" data-team="support">
+                    <i class="fas fa-hands-helping me-2"></i>Support Staff
+                </a>
             </div>
+        </div>
+    </div>
+
+    <!-- Leadership Team -->
+    <section id="leadership" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">School Leadership</h6>
+                <h2 class="display-4 fw-bold mb-3">Administrative <span style="background: linear-gradient(135deg, #4a6bff, #00c9a7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Team</span></h2>
+                <p class="lead">Guiding our institution with vision and dedication</p>
+            </div>
+            
             <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                <!-- Headteacher -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card" data-bs-toggle="modal" data-bs-target="#headteacherModal">
+                        <div class="team-img-container">
+                            <img src="img/headteacher.jpg" class="team-img" alt="Mr. Wandera Patrick">
+                            <div class="team-badge admin-badge">Headteacher</div>
+                            <div class="team-overlay">
+                                <h5 class="text-white mb-1">Mr. Wandera Patrick</h5>
+                                <small class="text-light">M.Ed Educational Leadership</small>
+                            </div>
+                            <div class="team-social">
+                                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
                             </div>
                         </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
+                        <div class="team-info">
+                            <h5 class="mb-2">Mr. Wandera Patrick</h5>
+                            <div class="team-qualification">M.Ed Educational Leadership</div>
+                            <p class="text-muted mb-3">With 20+ years in educational leadership, Mr. Wandera is committed to academic excellence and holistic student development.</p>
+                            <span class="team-department">Administration</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                
+                <!-- Director -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card" data-bs-toggle="modal" data-bs-target="#directorModal">
+                        <div class="team-img-container">
+                            <img src="img/director.jpg" class="team-img" alt="School Director">
+                            <div class="team-badge admin-badge">Founder & Director</div>
+                            <div class="team-overlay">
+                                <h5 class="text-white mb-1">School Director</h5>
+                                <small class="text-light">Ph.D Educational Management</small>
+                            </div>
+                            <div class="team-social">
+                                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
                             </div>
                         </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
+                        <div class="team-info">
+                            <h5 class="mb-2">School Director</h5>
+                            <div class="team-qualification">Ph.D Educational Management</div>
+                            <p class="text-muted mb-3">Founder of St Maliko High School with a vision to provide quality education accessible to all students in Western Uganda.</p>
+                            <span class="team-department">Administration</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                
+                <!-- Dean of Students -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card" data-bs-toggle="modal" data-bs-target="#deanModal">
+                        <div class="team-img-container">
+                            <img src="img/dean.jpg" class="team-img" alt="Mr. Osbert">
+                            <div class="team-badge admin-badge">Dean of Students</div>
+                            <div class="team-overlay">
+                                <h5 class="text-white mb-1">Mr. Osbert</h5>
+                                <small class="text-light">B.Sc. Education, Guidance & Counseling</small>
+                            </div>
+                            <div class="team-social">
+                                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
                             </div>
                         </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
+                        <div class="team-info">
+                            <h5 class="mb-2">Mr. Osbert</h5>
+                            <div class="team-qualification">B.Sc. Education, Guidance & Counseling</div>
+                            <p class="text-muted mb-3">Dedicated to student welfare and discipline, ensuring a conducive learning environment for all students.</p>
+                            <span class="team-department">Student Affairs</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Team End -->
-        
+    </section>
 
-     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Quick Link</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">FAQs & Help</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Hoima City, Bujumbura</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+256779625516</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+256777211342</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+256774994439</p>
-                   <p class="mb-2">
-    <i class="fa fa-envelope me-3"></i>
-    <a href="mailto:Smalikschoolhoima@gmail.com?subject=Inquiry&body=Hello, I would like to contact you about..." 
-       class="text-decoration-none">
-        Smalikschoolhoima@gmail.com
-    </a>
-</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Gallery</h4>
-                    <div class="row g-2 pt-2">
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Team Stats -->
+    <section class="team-stats">
         <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">St Maliko High School Hoima</a>, All Right Reserved.
-
-                        <!--/*** The author’s attribution link must remain intact in the template. ***/-->
-                        <!--/*** If you wish to remove this credit link, please purchase the Pro Version . ***/-->
-                        Designed By <a class="border-bottom" href="https://efitiandrew@gmail.com">Efiti Andrew</a>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="50">50+</div>
+                        <h5 class="text-light">Qualified Teachers</h5>
+                        <p class="text-light mb-0">Professional Educators</p>
                     </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="25">25+</div>
+                        <h5 class="text-light">Years Experience</h5>
+                        <p class="text-light mb-0">Average per Teacher</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="95">95%</div>
+                        <h5 class="text-light">Advanced Degrees</h5>
+                        <p class="text-light mb-0">Masters & PhDs</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-card">
+                        <div class="stat-number" data-count="15">15:1</div>
+                        <h5 class="text-light">Student-Teacher Ratio</h5>
+                        <p class="text-light mb-0">Personalized Attention</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Staff -->
+    <section id="teachers" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Academic Excellence</h6>
+                <h2 class="display-4 fw-bold mb-3">Teaching <span style="background: linear-gradient(135deg, #4a6bff, #00c9a7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Faculty</span></h2>
+                <p class="lead">Experienced educators dedicated to student success</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Science Teacher -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="img/science-teacher.jpg" class="team-img" alt="Science Teacher">
+                            <div class="team-badge sciences-badge">Head of Sciences</div>
+                        </div>
+                        <div class="team-info">
+                            <h5 class="mb-2">Dr. Sarah Kemi</h5>
+                            <div class="team-qualification">Ph.D Chemistry</div>
+                            <p class="text-muted mb-3">15+ years teaching experience, specialized in Chemistry and Physics.</p>
+                            <span class="team-department">Sciences Department</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mathematics Teacher -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="img/math-teacher.jpg" class="team-img" alt="Mathematics Teacher">
+                            <div class="team-badge sciences-badge">Mathematics</div>
+                        </div>
+                        <div class="team-info">
+                            <h5 class="mb-2">Mr. David Odoi</h5>
+                            <div class="team-qualification">M.Sc. Mathematics</div>
+                            <p class="text-muted mb-3">Specialized in Advanced Mathematics and Statistics, 12 years experience.</p>
+                            <span class="team-department">Sciences Department</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Arts Teacher -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="img/arts-teacher.jpg" class="team-img" alt="Arts Teacher">
+                            <div class="team-badge arts-badge">Head of Arts</div>
+                        </div>
+                        <div class="team-info">
+                            <h5 class="mb-2">Ms. Grace Amooti</h5>
+                            <div class="team-qualification">M.A. Literature</div>
+                            <p class="text-muted mb-3">Expert in Literature and History, passionate about creative writing.</p>
+                            <span class="team-department">Arts Department</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ICT Teacher -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="img/ict-teacher.jpg" class="team-img" alt="ICT Teacher">
+                            <div class="team-badge sciences-badge">ICT Coordinator</div>
+                        </div>
+                        <div class="team-info">
+                            <h5 class="mb-2">Mr. Andrew Musoke</h5>
+                            <div class="team-qualification">M.Sc. Computer Science</div>
+                            <p class="text-muted mb-3">Expert in computer programming and digital literacy education.</p>
+                            <span class="team-department">ICT Department</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Footer End -->
+    </section>
 
+    <!-- Message from Headteacher -->
+    <section class="py-5">
+        <div class="container">
+            <div class="headteacher-message">
+                <div class="row align-items-center">
+                    <div class="col-lg-3 text-center mb-4 mb-lg-0">
+                        <img src="img/headteacher.jpg" alt="Mr. Wandera Patrick" class="rounded-circle" style="width: 200px; height: 200px; object-fit: cover; border: 5px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="col-lg-9">
+                        <h4 class="text-primary mb-3">Message from Our Headteacher</h4>
+                        <blockquote class="blockquote mb-4">
+                            <p class="lead mb-3">"At St Maliko High School, we believe that every student has unique potential waiting to be unlocked. Our dedicated team of educators is committed to providing not just education, but transformation - shaping young minds to become responsible citizens and future leaders."</p>
+                        </blockquote>
+                        <div class="headteacher-signature">
+                            <h5 class="mb-1">Mr. Wandera Patrick</h5>
+                            <p class="text-muted mb-0">Headteacher, St Maliko High School Hoima</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Staff -->
+    <section id="support" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Behind the Scenes</h6>
+                <h2 class="display-4 fw-bold mb-3">Support <span style="background: linear-gradient(135deg, #4a6bff, #00c9a7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Staff</span></h2>
+                <p class="lead">The backbone of our school operations</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Sports Coordinator -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="img/sports-coordinator.jpg" class="team-img" alt="Sports Coordinator">
+                            <div class="team-badge sports-badge">Head of Sports</div>
+                        </div>
+                        <div class="team-info">
+                            <h5 class="mb-2">Tmwesigye Eunince</h5>
+                            <div class="team-qualification">B.Sc. Sports Science</div>
+                            <p class="text-muted mb-3">Coordinating all sports activities and talent development programs.</p>
+                            <span class="team-department">Sports Department</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Librarian -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="img/librarian.jpg" class="team-img" alt="School Librarian">
+                            <div class="team-badge support-badge">Librarian</div>
+                        </div>
+                        <div class="team-info">
+                            <h5 class="mb-2">Ms. Rebecca Atim</h5>
+                            <div class="team-qualification">Diploma in Library Science</div>
+                            <p class="text-muted mb-3">Managing our extensive library collection and promoting reading culture.</p>
+                            <span class="team-department">Library Services</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Laboratory Technician -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="team-card">
+                        <div class="team-img-container">
+                            <img src="img/lab-technician.jpg" class="team-img" alt="Lab Technician">
+                            <div class="team-badge sciences-badge">Lab Technician</div>
+                        </div>
+                        <div class="team-info">
+                            <h5 class="mb-2">Mr. John Okello</h5>
+                            <div class="team-qualification">Diploma in Laboratory Technology</div>
+                            <p class="text-muted mb-3">Ensuring safe and efficient operation of all science laboratories.</p>
+                            <span class="team-department">Laboratory Services</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Our Team -->
+    <section class="py-5" style="background: linear-gradient(135deg, #4a6bff, #00c9a7);">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold text-white mb-4">Join Our <span class="text-warning">Dedicated</span> Team</h2>
+                    <p class="lead text-white mb-5">We're always looking for passionate educators and staff to join our mission of providing quality education.</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="careers.html" class="btn btn-light btn-lg">
+                            <i class="fas fa-briefcase me-2"></i>View Open Positions
+                        </a>
+                        <a href="contact.html" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-envelope me-2"></i>Send Application
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a href="index.html" class="text-decoration-none">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary rounded-circle p-3 me-3">
+                                <i class="fas fa-graduation-cap text-white fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white mb-0">St Maliko High School</h4>
+                                <small class="text-light">Hoima, Uganda</small>
+                            </div>
+                        </div>
+                    </a>
+                    <p class="mb-4">Excellence in education with a dedicated team of professionals committed to student success since 1995.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-light text-decoration-none">About</a></li>
+                        <li class="mb-2"><a href="academics.html" class="text-light text-decoration-none">Academics</a></li>
+                        <li class="mb-2"><a href="team.html" class="text-light text-decoration-none">Our Team</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>Hoima City, Bujumbura, Uganda</p>
+                    <p class="mb-2"><i class="fas fa-phone-alt me-2"></i>+256 779 625516</p>
+                    <p class="mb-2"><i class="fas fa-phone-alt me-2"></i>+256 777 211342</p>
+                    <p class="mb-2"><i class="fas fa-envelope me-2"></i>Smalikschoolhoima@gmail.com</p>
+                    <p><i class="fas fa-clock me-2"></i>Office: 8:00 AM - 5:00 PM</p>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p>Subscribe for school updates and announcements.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email address">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 St Maliko High School Hoima. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> by <a href="mailto:efitiandrew@gmail.com" class="text-light text-decoration-none">Efiti Andrew</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-primary btn-lg rounded-circle back-to-top position-fixed" style="bottom: 30px; right: 30px;">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
+    <!-- Modals for Team Members -->
+    <!-- Headteacher Modal -->
+    <div class="modal fade" id="headteacherModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mr. Wandera Patrick - Headteacher</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="img/headteacher.jpg" class="team-modal-img" alt="Mr. Wandera Patrick">
+                        </div>
+                        <div class="col-md-8">
+                            <h4 class="mb-2">Mr. Wandera Patrick</h4>
+                            <p class="modal-qualification">M.Ed Educational Leadership</p>
+                            <p>With over 20 years of experience in educational leadership, Mr. Wandera Patrick has been instrumental in shaping the academic direction of St Maliko High School. His leadership focuses on:</p>
+                            <ul>
+                                <li>Academic excellence and innovation</li>
+                                <li>Holistic student development</li>
+                                <li>Teacher professional development</li>
+                                <li>Community engagement and partnerships</li>
+                            </ul>
+                            <p><strong>Contact:</strong> headteacher@stmalikohoima.ac.ug</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -347,10 +784,73 @@
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    <script>
+        // Team Navigation
+        document.querySelectorAll('.team-nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Update active link
+                document.querySelectorAll('.team-nav-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Scroll to section
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Counter Animation
+        $(document).ready(function() {
+            $('.stat-number').each(function() {
+                var $this = $(this);
+                var countTo = parseInt($this.attr('data-count'));
+                
+                $({ countNum: 0 }).animate({
+                    countNum: countTo
+                },
+                {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function() {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function() {
+                        $this.text(this.countNum);
+                    }
+                });
+            });
+        });
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe team cards
+        document.querySelectorAll('.team-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
 </body>
 
 </html>
