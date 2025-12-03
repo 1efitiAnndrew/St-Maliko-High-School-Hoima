@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Admissions | St Maliko High School Hoima - Coming Soon</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="St Maliko High School admission, apply Hoima, enrollment Uganda, O-Level admission, A-Level admission, school application" name="keywords">
+    <meta content="Admissions page for St Maliko High School Hoima is currently under development. Please check back soon for application details and enrollment information." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #4a6bff;
+            --secondary-color: #00c9a7;
+            --accent-color: #ff6b6b;
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        main {
+            flex: 1;
+        }
+        
+        /* Construction Hero */
+        .construction-hero {
+            position: relative;
+            background: linear-gradient(135deg, var(--dark-color), #16213e);
+            color: white;
+            padding: 120px 0 80px;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .construction-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><path fill="rgba(255,255,255,0.03)" d="M500,250c138.07,0,250,111.93,250,250s-111.93,250-250,250s-250-111.93-250-250S361.93,250,500,250z M500,450c27.61,0,50,22.39,50,50s-22.39,50-50,50s-50-22.39-50-50S472.39,450,500,450z"></path></svg>');
+            background-size: 300px;
+            opacity: 0.5;
+        }
+        
+        .construction-badge {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            box-shadow: 0 5px 20px rgba(74, 107, 255, 0.4);
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Construction Icons */
+        .construction-icons {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        
+        .construction-icon {
+            position: absolute;
+            font-size: 2rem;
+            color: rgba(255, 255, 255, 0.1);
+            animation: float 6s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        
+        /* Coming Soon Card */
+        .coming-soon-card {
+            background: white;
+            border-radius: 25px;
+            padding: 50px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            margin-top: -50px;
+            border: 3px solid var(--primary-color);
+        }
+        
+        .progress-container {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px 0;
+            border: 2px dashed rgba(74, 107, 255, 0.3);
+        }
+        
+        .progress-bar {
+            height: 10px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shimmer 2s infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        /* Developer Info */
+        .developer-card {
+            background: linear-gradient(135deg, rgba(74, 107, 255, 0.1), rgba(0, 201, 167, 0.1));
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 30px;
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .developer-avatar {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        /* Contact Info */
+        .contact-mini {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding: 0;
+            margin: 40px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            width: 50%;
+            padding: 0 40px;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+            border: 2px solid rgba(74, 107, 255, 0.2);
+        }
+        
+        /* Countdown */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .countdown-item {
+            text-align: center;
+        }
+        
+        .countdown-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .construction-hero {
+                padding: 100px 0 60px;
+                min-height: 60vh;
+            }
+            
+            .coming-soon-card {
+                padding: 30px;
+                margin-top: -30px;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 70px;
+                padding-right: 25px;
+                text-align: left !important;
+            }
+            
+            .countdown {
+                gap: 10px;
+            }
+            
+            .countdown-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top py-3">
+        <div class="container">
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <div class="bg-primary rounded-circle p-2 me-3">
+                    <i class="fas fa-graduation-cap text-white fa-2x"></i>
+                </div>
+                <div>
+                    <h4 class="mb-0 text-primary fw-bold">St Maliko High School</h4>
+                    <small class="text-muted">Hoima, Uganda</small>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto align-items-center">
+                    <a href="index.html" class="nav-item nav-link px-3">Home</a>
+                    <a href="about.html" class="nav-item nav-link px-3">About</a>
+                    <a href="academics.html" class="nav-item nav-link px-3">Academics</a>
+                    <a href="sports.html" class="nav-item nav-link px-3">Sports</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle px-3 active" data-bs-toggle="dropdown">More</a>
+                        <div class="dropdown-menu border-0 rounded shadow">
+                            <a href="team.html" class="dropdown-item">Our Team</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+                            <a href="gallery.html" class="dropdown-item">Gallery</a>
+                            <a href="fees.html" class="dropdown-item">Fees & Dues</a>
+                            <a href="admission.html" class="dropdown-item active">Admissions</a>
+                            <a href="contact.html" class="dropdown-item">Contact</a>
+                        </div>
+                    </div>
+                    <a href="admission.html" class="nav-item nav-link px-3 active">Admissions</a>
+                    <a href="contact.html" class="btn btn-primary ms-3">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Construction Hero -->
+    <section class="construction-hero">
+        <div class="construction-icons">
+            <!-- Random construction icons floating around -->
+            <div class="construction-icon" style="top: 20%; left: 10%;"><i class="fas fa-tools"></i></div>
+            <div class="construction-icon" style="top: 40%; right: 15%;"><i class="fas fa-code"></i></div>
+            <div class="construction-icon" style="top: 70%; left: 20%;"><i class="fas fa-laptop-code"></i></div>
+            <div class="construction-icon" style="top: 30%; right: 25%;"><i class="fas fa-hammer"></i></div>
+            <div class="construction-icon" style="top: 60%; right: 10%;"><i class="fas fa-cogs"></i></div>
+            <div class="construction-icon" style="top: 80%; left: 15%;"><i class="fas fa-wrench"></i></div>
+        </div>
+        
+        <div class="container position-relative">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="construction-badge">
+                        <i class="fas fa-hard-hat"></i> Page Under Construction
+                    </div>
+                    <h1 class="display-1 fw-bold text-white mb-4">Admissions <span class="text-warning">Coming</span> Soon</h1>
+                    <p class="lead text-light mb-5">We're building an amazing admissions experience for you. Our team is working hard to create a comprehensive application system that will make enrollment seamless and efficient.</p>
+                    
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="days">--</div>
+                            <div class="text-light">Days</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="hours">--</div>
+                            <div class="text-light">Hours</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="minutes">--</div>
+                            <div class="text-light">Minutes</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="seconds">--</div>
+                            <div class="text-light">Seconds</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- Coming Soon Card -->
+                    <div class="coming-soon-card">
+                        <div class="mb-5">
+                            <i class="fas fa-cog fa-spin fa-3x text-primary mb-4"></i>
+                            <h2 class="display-5 fw-bold mb-3">Development in <span style="background: linear-gradient(135deg, #4a6bff, #00c9a7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Progress</span></h2>
+                            <p class="lead text-muted mb-4">The admissions section is currently being developed. We're creating a comprehensive application system that will include:</p>
+                            
+                            <div class="progress-container">
+                                <h5 class="mb-3 text-primary">Development Progress</h5>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar" style="width: 65%;"></div>
+                                </div>
+                                <p class="text-muted mb-0"><small>Estimated completion: 2-3 weeks</small></p>
+                            </div>
+                        </div>
+                        
+                        <!-- What's Coming -->
+                        <div class="row g-4 mb-5">
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                                        <i class="fas fa-file-alt text-primary fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-2">Online Application</h5>
+                                        <p class="text-muted mb-0">Complete digital application process with instant submission</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                                        <i class="fas fa-calendar-check text-primary fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-2">Admission Calendar</h5>
+                                        <p class="text-muted mb-0">Important dates, deadlines, and application timeline</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                                        <i class="fas fa-graduation-cap text-primary fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-2">Requirements</h5>
+                                        <p class="text-muted mb-0">Complete list of admission requirements for O & A-Level</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                                        <i class="fas fa-download text-primary fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-2">Downloads</h5>
+                                        <p class="text-muted mb-0">Application forms, prospectus, and other resources</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Developer Working Message -->
+                        <div class="developer-card">
+                            <div class="developer-avatar">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h4 class="text-center mb-3">Developer Working on It</h4>
+                            <p class="text-center text-muted mb-3">Our developer is actively working on creating a comprehensive admissions system. The page will include online applications, requirements, deadlines, and more.</p>
+                            <div class="text-center">
+                                <span class="badge bg-primary mb-2">Status: Active Development</span>
+                                <p class="text-muted mb-0"><small>Last updated: Today</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Temporary Contact Info -->
+                    <div class="contact-mini">
+                        <h4 class="text-white mb-4">Need Admission Information Now?</h4>
+                        <p class="text-light mb-4">While we're building the online system, you can contact our admissions office directly for application details and requirements.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-white rounded-circle p-2 me-3">
+                                        <i class="fas fa-phone text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-light mb-0"><strong>Phone:</strong></p>
+                                        <p class="text-light mb-0">+256 779 625516</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-white rounded-circle p-2 me-3">
+                                        <i class="fas fa-envelope text-primary"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-light mb-0"><strong>Email:</strong></p>
+                                        <p class="text-light mb-0">admissions@stmalikohoima.ac.ug</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <a href="contact.html" class="btn btn-light">
+                                <i class="fas fa-external-link-alt me-2"></i>Visit Contact Page
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Back to Other Pages -->
+                    <div class="text-center mt-5">
+                        <h5 class="mb-4">Explore Other Sections</h5>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <a href="academics.html" class="btn btn-outline-primary">
+                                <i class="fas fa-graduation-cap me-2"></i>Academics
+                            </a>
+                            <a href="fees.html" class="btn btn-outline-primary">
+                                <i class="fas fa-credit-card me-2"></i>Fees & Dues
+                            </a>
+                            <a href="about.html" class="btn btn-outline-primary">
+                                <i class="fas fa-info-circle me-2"></i>About School
+                            </a>
+                            <a href="contact.html" class="btn btn-outline-primary">
+                                <i class="fas fa-phone-alt me-2"></i>Contact Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a href="index.html" class="text-decoration-none">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary rounded-circle p-3 me-3">
+                                <i class="fas fa-graduation-cap text-white fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white mb-0">St Maliko High School</h4>
+                                <small class="text-light">Hoima, Uganda</small>
+                            </div>
+                        </div>
+                    </a>
+                    <p class="mb-4">Quality education with modern facilities. Admissions portal coming soon!</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-light text-decoration-none">About</a></li>
+                        <li class="mb-2"><a href="academics.html" class="text-light text-decoration-none">Academics</a></li>
+                        <li class="mb-2"><a href="fees.html" class="text-light text-decoration-none">Fees</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Admissions Office</h5>
+                    <p class="mb-2"><i class="fas fa-phone-alt me-2"></i>+256 779 625516</p>
+                    <p class="mb-2"><i class="fas fa-envelope me-2"></i>admissions@stmalikohoima.ac.ug</p>
+                    <p><i class="fas fa-clock me-2"></i>Office: 8:00 AM - 5:00 PM</p>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-4">Admissions Updates</h5>
+                    <p>Be the first to know when our admissions portal launches!</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email address">
+                        <button class="btn btn-primary" type="button">Notify Me</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 St Maliko High School Hoima. All rights reserved.</p>
+                    <p class="mb-0"><small>Admissions page under development</small></p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> by <a href="mailto:efitiandrew@gmail.com" class="text-light text-decoration-none">Efiti Andrew</a></p>
+                    <p class="mb-0"><small>Developer actively working on admissions system</small></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg rounded-circle back-to-top position-fixed" style="bottom: 30px; right: 30px;">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Countdown Timer (sets to 30 days from now)
+        function updateCountdown() {
+            const now = new Date();
+            const launchDate = new Date();
+            launchDate.setDate(now.getDate() + 30); // 30 days from now
+            
+            const difference = launchDate - now;
+            
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+        
+        // Animate construction icons
+        document.querySelectorAll('.construction-icon').forEach((icon, index) => {
+            icon.style.animationDelay = `${index * 0.5}s`;
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Notify Me button
+        document.querySelector('.btn-primary[type="button"]').addEventListener('click', function() {
+            const email = this.parentElement.querySelector('input').value;
+            if (email) {
+                alert(`Thank you! We'll notify you at ${email} when the admissions portal launches.`);
+                this.parentElement.querySelector('input').value = '';
+            } else {
+                alert('Please enter your email address.');
+            }
+        });
+    </script>
+</body>
+
+</html>

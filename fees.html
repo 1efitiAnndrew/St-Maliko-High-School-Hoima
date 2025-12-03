@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Fees & Dues | St Maliko High School Hoima - Tuition and Payments</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="St Maliko High School fees, tuition Hoima, school payments Uganda, O-Level fees, A-Level fees, boarding fees, payment structure" name="keywords">
+    <meta content="Complete fee structure for St Maliko High School Hoima. View O-Level and A-Level tuition, boarding fees, payment methods, and admission requirements." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #4a6bff;
+            --secondary-color: #00c9a7;
+            --accent-color: #ff6b6b;
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /* Fees Hero */
+        .fees-hero {
+            position: relative;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.85)), url('img/fees-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0 80px;
+            color: white;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .fees-badge {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(74, 107, 255, 0.3);
+            margin-bottom: 20px;
+        }
+        
+        /* Fees Cards */
+        .fees-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            height: 100%;
+            border: 2px solid transparent;
+        }
+        
+        .fees-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            border-color: var(--primary-color);
+        }
+        
+        .fees-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+        
+        .fees-icon i {
+            font-size: 1.8rem;
+            color: white;
+        }
+        
+        /* Fees Tables */
+        .fees-table {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+        
+        .table-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 20px;
+        }
+        
+        .fees-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .fees-table th {
+            background: rgba(74, 107, 255, 0.1);
+            color: var(--dark-color);
+            font-weight: 600;
+            padding: 15px;
+            text-align: left;
+            border-bottom: 2px solid rgba(74, 107, 255, 0.2);
+        }
+        
+        .fees-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .fees-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .fees-table tr:hover {
+            background: rgba(74, 107, 255, 0.05);
+        }
+        
+        .amount {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        /* Payment Methods */
+        .payment-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid #e9ecef;
+        }
+        
+        .payment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            border-color: var(--primary-color);
+        }
+        
+        .bank-logo {
+            height: 50px;
+            margin-bottom: 15px;
+            object-fit: contain;
+        }
+        
+        .account-number {
+            background: rgba(74, 107, 255, 0.1);
+            color: var(--primary-color);
+            padding: 8px 15px;
+            border-radius: 10px;
+            font-family: monospace;
+            font-weight: 600;
+        }
+        
+        /* Important Notes */
+        .important-card {
+            background: linear-gradient(135deg, #fff8e1, #fff3e0);
+            border-left: 5px solid #ff9800;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        /* Payment Schedule */
+        .schedule-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 25px;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px rgba(74, 107, 255, 0.2);
+        }
+        
+        /* CTA Section */
+        .fees-cta {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .fees-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('img/pattern-light.png');
+            opacity: 0.1;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .fees-hero {
+                padding: 100px 0 60px;
+                min-height: 50vh;
+            }
+            
+            .fees-card, .payment-card {
+                padding: 25px;
+            }
+            
+            .table-responsive {
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top py-3">
+        <div class="container">
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <div class="bg-primary rounded-circle p-2 me-3">
+                    <i class="fas fa-graduation-cap text-white fa-2x"></i>
+                </div>
+                <div>
+                    <h4 class="mb-0 text-primary fw-bold">St Maliko High School</h4>
+                    <small class="text-muted">Hoima, Uganda</small>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto align-items-center">
+                    <a href="index.html" class="nav-item nav-link px-3">Home</a>
+                    <a href="about.html" class="nav-item nav-link px-3">About</a>
+                    <a href="academics.html" class="nav-item nav-link px-3">Academics</a>
+                    <a href="sports.html" class="nav-item nav-link px-3">Sports</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle px-3" data-bs-toggle="dropdown">More</a>
+                        <div class="dropdown-menu border-0 rounded shadow">
+                            <a href="team.html" class="dropdown-item">Our Team</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+                            <a href="gallery.html" class="dropdown-item">Gallery</a>
+                            <a href="fees.html" class="dropdown-item active">Fees & Dues</a>
+                            <a href="contact.html" class="dropdown-item">Contact</a>
+                        </div>
+                    </div>
+                    <a href="fees.html" class="nav-item nav-link px-3 active">Fees</a>
+                    <a href="admission.html" class="btn btn-primary ms-3">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section -->
+    <section class="fees-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <div class="fees-badge">
+                        <i class="fas fa-credit-card"></i> Transparent Fee Structure
+                    </div>
+                    <h1 class="display-2 fw-bold text-white mb-4">Fees & <span class="text-warning">Payments</span></h1>
+                    <p class="lead text-light mb-4">Clear and comprehensive fee structure for O-Level and A-Level programs. We believe in transparent pricing with no hidden costs.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#fee-structure" class="btn btn-warning btn-lg">
+                            <i class="fas fa-table me-2"></i>View Fee Structure
+                        </a>
+                        <a href="#payment" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-university me-2"></i>Payment Methods
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Info Cards -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="fees-card text-center">
+                        <div class="fees-icon mx-auto">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <h4 class="mb-3">Quality Education</h4>
+                        <p class="text-muted mb-3">Our fees cover quality education with modern facilities, experienced teachers, and comprehensive learning resources.</p>
+                        <a href="academics.html" class="text-primary text-decoration-none">View Academics →</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="fees-card text-center">
+                        <div class="fees-icon mx-auto">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4 class="mb-3">No Hidden Costs</h4>
+                        <p class="text-muted mb-3">All fees are clearly outlined with no hidden charges. We believe in complete transparency with parents.</p>
+                        <a href="#fee-structure" class="text-primary text-decoration-none">See Full Breakdown →</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="fees-card text-center">
+                        <div class="fees-icon mx-auto">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h4 class="mb-3">Flexible Payments</h4>
+                        <p class="text-muted mb-3">Multiple payment options available through major banks. Contact us for customized payment plans.</p>
+                        <a href="#payment" class="text-primary text-decoration-none">Payment Options →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Notice -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="important-card">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="fas fa-exclamation-triangle fa-2x text-warning me-3"></i>
+                    <h4 class="mb-0">Important Notice to Parents/Guardians</h4>
+                </div>
+                <p class="mb-0"><strong>NB:</strong> All school fees and other dues must be paid through the designated banks using the official school bank slip issued to your child. Please ensure you deliver the school copy of the bank slip to the Bursar's office for proper recording and receipt.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bank Accounts -->
+    <section id="payment" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Payment Methods</h6>
+                <h2 class="display-4 fw-bold mb-3">Bank <span style="background: linear-gradient(135deg, #4a6bff, #00c9a7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Accounts</span></h2>
+                <p class="lead">Designated bank accounts for different class levels</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="payment-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                                <i class="fas fa-university text-primary fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">O-Level Classes</h5>
+                                <p class="text-muted mb-0">S1, S2, S3 & S4</p>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <h6 class="text-primary mb-2">Equity Bank Uganda</h6>
+                            <div class="account-number d-inline-block mb-2">xxxxxxxxxxxxxxx</div>
+                        </div>
+                        <p class="text-muted mb-0"><small><i class="fas fa-info-circle me-1"></i> Use this account for all O-Level fee payments</small></p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="payment-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary bg-opacity-10 rounded-circle p-3 me-3">
+                                <i class="fas fa-landmark text-primary fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">A-Level Classes</h5>
+                                <p class="text-muted mb-0">S5 & S6</p>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <h6 class="text-primary mb-2">Bank of Africa, Uganda</h6>
+                            <div class="account-number d-inline-block mb-2">xxxxxxxxxxxxxxxxx</div>
+                        </div>
+                        <p class="text-muted mb-0"><small><i class="fas fa-info-circle me-1"></i> Use this account for all A-Level fee payments</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Requirements -->
+    <section id="fee-structure" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">For New Students</h6>
+                <h2 class="display-4 fw-bold mb-3">Admission <span style="background: linear-gradient(135deg, #4a6bff, #00c9a7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Requirements</span></h2>
+            </div>
+            
+            <div class="fees-table">
+                <div class="table-header">
+                    <h5 class="mb-0 text-white">One-Time Admission Fees (Payable on Admission)</h5>
+                </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Item Description</th>
+                                <th>Amount (UGX)</th>
+                                <th>Comment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Admission Fee</td>
+                                <td class="amount">100,000</td>
+                                <td>One-time payment</td>
+                            </tr>
+                            <tr>
+                                <td>Development Fee</td>
+                                <td class="amount">120,000</td>
+                                <td>School infrastructure</td>
+                            </tr>
+                            <tr>
+                                <td>Complete Uniform Set</td>
+                                <td class="amount">345,000</td>
+                                <td>Full school uniform</td>
+                            </tr>
+                            <tr>
+                                <td>Bank Charges</td>
+                                <td class="amount">3,000</td>
+                                <td>Transaction fee</td>
+                            </tr>
+                            <tr class="table-active">
+                                <td><strong>Total Payable on Admission</strong></td>
+                                <td class="amount"><strong>568,000</strong></td>
+                                <td><strong>For Boarding Students</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="fees-table mt-4">
+                <div class="table-header">
+                    <h5 class="mb-0 text-white">Uniform Breakdown (Minimum Requirements)</h5>
+                </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Uniform Item</th>
+                                <th>Unit Cost</th>
+                                <th>Quantity</th>
+                                <th>Total Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Trouser/Skirt</td>
+                                <td class="amount">60,000</td>
+                                <td>2 pieces</td>
+                                <td class="amount">120,000</td>
+                            </tr>
+                            <tr>
+                                <td>Shirt/Blouse</td>
+                                <td class="amount">50,000</td>
+                                <td>1 piece</td>
+                                <td class="amount">50,000</td>
+                            </tr>
+                            <tr>
+                                <td>T-Shirt</td>
+                                <td class="amount">50,000</td>
+                                <td>1 piece</td>
+                                <td class="amount">50,000</td>
+                            </tr>
+                            <tr>
+                                <td>Tie</td>
+                                <td class="amount">20,000</td>
+                                <td>1 piece</td>
+                                <td class="amount">20,000</td>
+                            </tr>
+                            <tr>
+                                <td>Stockings</td>
+                                <td class="amount">15,000</td>
+                                <td>1 pair</td>
+                                <td class="amount">15,000</td>
+                            </tr>
+                            <tr>
+                                <td>Sweater</td>
+                                <td class="amount">40,000</td>
+                                <td>1 piece</td>
+                                <td class="amount">40,000</td>
+                            </tr>
+                            <tr>
+                                <td>Sports Wear</td>
+                                <td class="amount">55,000</td>
+                                <td>1 set</td>
+                                <td class="amount">55,000</td>
+                            </tr>
+                            <tr class="table-active">
+                                <td><strong>Total Uniform Cost</strong></td>
+                                <td></td>
+                                <td></td>
+                                <td class="amount"><strong>350,000</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fee Structure -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Annual Fees</h6>
+                <h2 class="display-4 fw-bold mb-3">Fee <span style="background: linear-gradient(135deg, #4a6bff, #00c9a7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Structure</span> 2025</h2>
+            </div>
+            
+            <!-- O-Level Fees -->
+            <div class="fees-table mb-5">
+                <div class="table-header">
+                    <h5 class="mb-0 text-white">O-Level Fees: S1, S2 & S3 - Term 1, 2025</h5>
+                </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Description</th>
+                                <th>Boarding Students</th>
+                                <th>Remarks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tuition Fees</td>
+                                <td class="amount">1,200,000</td>
+                                <td>Full term tuition</td>
+                            </tr>
+                            <tr>
+                                <td>Skilling & ICT Development</td>
+                                <td class="amount">100,000</td>
+                                <td>Infrastructure development</td>
+                            </tr>
+                            <tr>
+                                <td>Ream of Paper</td>
+                                <td class="amount">25,000</td>
+                                <td>Academic materials</td>
+                            </tr>
+                            <tr>
+                                <td>Bank Charges</td>
+                                <td class="amount">3,000</td>
+                                <td>Transaction fee</td>
+                            </tr>
+                            <tr class="table-active">
+                                <td><strong>Total Term Fees</strong></td>
+                                <td class="amount"><strong>1,328,000</strong></td>
+                                <td><strong>Payable before reporting</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- A-Level Fees -->
+            <div class="fees-table">
+                <div class="table-header">
+                    <h5 class="mb-0 text-white">A-Level Fees: S5 & S6 - Term 1, 2025</h5>
+                </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Description</th>
+                                <th>Boarding Students</th>
+                                <th>Remarks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tuition Fees</td>
+                                <td class="amount">1,300,000</td>
+                                <td>Full term tuition</td>
+                            </tr>
+                            <tr>
+                                <td>Skilling & ICT Development</td>
+                                <td class="amount">100,000</td>
+                                <td>Infrastructure development</td>
+                            </tr>
+                            <tr>
+                                <td>Ream of Paper</td>
+                                <td class="amount">25,000</td>
+                                <td>Academic materials</td>
+                            </tr>
+                            <tr>
+                                <td>Bank Charges</td>
+                                <td class="amount">3,000</td>
+                                <td>Transaction fee</td>
+                            </tr>
+                            <tr class="table-active">
+                                <td><strong>Total Term Fees</strong></td>
+                                <td class="amount"><strong>1,428,000</strong></td>
+                                <td><strong>Payable before reporting</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="important-card mt-4">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="fas fa-exclamation-circle fa-2x text-primary me-3"></i>
+                    <h5 class="mb-0">Payment Advisory</h5>
+                </div>
+                <p class="mb-0"><strong>NB:</strong> Parents are strongly advised to pay full school fees before students report to school to avoid inconveniences. If unable to pay full fees at once, a minimum payment as indicated for specific classes must be made. Students with incomplete fees will not be allowed to attend classes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- UNEB Registration -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="schedule-card">
+                <div class="text-center mb-4">
+                    <h4 class="text-primary fw-bold">UNEB Registration 2025</h4>
+                </div>
+                <p class="mb-4">Every prospective S.4 and S.6 student must pay UNEB registration fees prior to being enrolled in a candidate class. The amount of money payable includes both UNEB registration fees and electronic passport photograph costs.</p>
+                
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="mb-4">
+                            <h6 class="text-primary mb-3">Registration Fees</h6>
+                            <ul class="list-unstyled">
+                                <li class="timeline-item mb-2">S.4 Candidates: <span class="amount">260,000 UGX</span></li>
+                                <li class="timeline-item mb-2">S.6 Candidates: <span class="amount">260,000 UGX</span></li>
+                                <li class="timeline-item">Included in total term fees for candidate classes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="mb-4">
+                            <h6 class="text-primary mb-3">Required Documents</h6>
+                            <ul class="list-unstyled">
+                                <li class="timeline-item mb-2">2 photocopies of P.L.E slips (S.4 Candidates)</li>
+                                <li class="timeline-item mb-2">2 photocopies of U.C.E results slips (S.6 Candidates)</li>
+                                <li class="timeline-item">1 photocopy of birth certificate</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Schedule -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Payment Timeline</h6>
+                <h2 class="display-4 fw-bold mb-3">Payment <span style="background: linear-gradient(135deg, #4a6bff, #00c9a7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Schedule</span></h2>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="payment-card text-center">
+                        <div class="bg-primary bg-opacity-10 rounded-circle p-4 d-inline-block mb-3">
+                            <i class="fas fa-calendar-check text-primary fa-2x"></i>
+                        </div>
+                        <h5 class="mb-3">Before Reporting</h5>
+                        <p class="text-muted mb-0">Full fees or minimum payment must be completed before student reports to school for each term.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="payment-card text-center">
+                        <div class="bg-primary bg-opacity-10 rounded-circle p-4 d-inline-block mb-3">
+                            <i class="fas fa-university text-primary fa-2x"></i>
+                        </div>
+                        <h5 class="mb-3">Bank Payment</h5>
+                        <p class="text-muted mb-0">Use designated bank accounts based on student's class level (O-Level or A-Level).</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="payment-card text-center">
+                        <div class="bg-primary bg-opacity-10 rounded-circle p-4 d-inline-block mb-3">
+                            <i class="fas fa-receipt text-primary fa-2x"></i>
+                        </div>
+                        <h5 class="mb-3">Submit Slip</h5>
+                        <p class="text-muted mb-0">Deliver school copy of bank slip to Bursar's office for receipt and proper recording.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="fees-cta">
+        <div class="container position-relative">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold text-white mb-4">Need Clarification on <span class="text-warning">Fees</span>?</h2>
+                    <p class="lead text-white mb-5">Our accounts office is ready to assist you with any fee-related inquiries or payment arrangements.</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="contact.html" class="btn btn-light btn-lg">
+                            <i class="fas fa-phone-alt me-2"></i>Contact Accounts
+                        </a>
+                        <a href="admission.html" class="btn btn-outline-light btn-lg">
+                            <i class="fas fa-user-graduate me-2"></i>Begin Admission
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a href="index.html" class="text-decoration-none">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-primary rounded-circle p-3 me-3">
+                                <i class="fas fa-graduation-cap text-white fa-2x"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white mb-0">St Maliko High School</h4>
+                                <small class="text-light">Hoima, Uganda</small>
+                            </div>
+                        </div>
+                    </a>
+                    <p class="mb-4">Transparent fee structure with no hidden costs. Quality education at affordable rates.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="academics.html" class="text-light text-decoration-none">Academics</a></li>
+                        <li class="mb-2"><a href="fees.html" class="text-light text-decoration-none">Fees & Dues</a></li>
+                        <li class="mb-2"><a href="admission.html" class="text-light text-decoration-none">Admissions</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Accounts Office</h5>
+                    <p class="mb-2"><i class="fas fa-phone-alt me-2"></i>+256 774 994439</p>
+                    <p class="mb-2"><i class="fas fa-envelope me-2"></i>accounts@stmalikohoima.ac.ug</p>
+                    <p class="mb-2"><i class="fas fa-clock me-2"></i>Mon-Fri: 8:00 AM - 5:00 PM</p>
+                    <p class="mb-2"><i class="fas fa-clock me-2"></i>Sat: 9:00 AM - 1:00 PM</p>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-4">Fee Updates</h5>
+                    <p>Subscribe for fee structure updates and payment deadline reminders.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email address">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 St Maliko High School Hoima. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> by <a href="mailto:efitiandrew@gmail.com" class="text-light text-decoration-none">Efiti Andrew</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg rounded-circle back-to-top position-fixed" style="bottom: 30px; right: 30px;">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all cards and tables
+        document.querySelectorAll('.fees-card, .payment-card, .fees-table').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+
+</html>
