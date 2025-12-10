@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Gallery - St Maliko High School Hoima | Photo Collection</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="St Maliko High School Hoima gallery, photos, campus images, school events, activities, sports, academics Uganda" name="keywords">
+    <meta content="Explore our photo gallery showcasing campus life, academic activities, sports events, and school facilities at St Maliko High School Hoima." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #4a6bff;
+            --secondary-color: #ff6b6b;
+            --accent-color: #00d4aa;
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+            --light-blue-bg: #f0f8ff;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-blue-bg);
+        }
+        
+        .hero-section {
+            position: relative;
+            background: linear-gradient(rgba(26, 26, 46, 0.9), rgba(26, 26, 46, 0.8)), url('img/gallery-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            color: white;
+            text-align: center;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+        
+        /* Gallery Filter Buttons */
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+        
+        .filter-btn {
+            padding: 10px 25px;
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 30px;
+            font-weight: 600;
+            color: var(--dark-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border-color: transparent;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(74, 107, 255, 0.3);
+        }
+        
+        /* Gallery Grid */
+        .gallery-container {
+            padding: 80px 0;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            height: 280px;
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            padding: 25px 20px 20px;
+            color: white;
+            transform: translateY(10px);
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .gallery-category {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .gallery-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .gallery-date {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        
+        /* Lightbox Modal */
+        .lightbox-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1100;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .lightbox-modal.active {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+        
+        .lightbox-img {
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+        
+        .lightbox-caption {
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: -50px;
+            right: 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            outline: none;
+        }
+        
+        .lightbox-close:hover {
+            background: var(--primary-color);
+            transform: scale(1.1);
+        }
+        
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(74, 107, 255, 0.8);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            outline: none;
+        }
+        
+        .lightbox-nav:hover {
+            background: var(--primary-color);
+        }
+        
+        .lightbox-prev {
+            left: 20px;
+        }
+        
+        .lightbox-next {
+            right: 20px;
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 20px;
+            }
+            
+            .hero-section {
+                padding: 80px 0;
+            }
+            
+            .lightbox-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+            
+            .lightbox-prev {
+                left: 10px;
+            }
+            
+            .lightbox-next {
+                right: 10px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-filter {
+                gap: 8px;
+            }
+            
+            .filter-btn {
+                padding: 8px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Load More Button */
+        .load-more {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .btn-load {
+            padding: 12px 35px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(74, 107, 255, 0.3);
+        }
+        
+        .btn-load:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(74, 107, 255, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow sticky-top py-3">
+        <div class="container">
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <div class="nav-logo-icon">
+                   <img src="img/badge.jpg" alt="Profile" class="profile-image" style="width: 50px; height: 50px; border-radius: 50%; ">
+                </div>
+                <div>
+                    <h4 class="mb-0 text-primary fw-bold">St Maliko High School</h4>
+                    <small class="text-muted">Hoima, Uganda</small>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="index.html" class="nav-item nav-link px-3">Home</a>
+                    <a href="about.html" class="nav-item nav-link px-3">About</a>
+                    <a href="academics.html" class="nav-item nav-link px-3">Academics</a>
+                    <a href="sports.html" class="nav-item nav-link px-3">Sports</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle px-3" data-bs-toggle="dropdown">More</a>
+                        <div class="dropdown-menu border-0 rounded shadow">
+                            <a href="team.html" class="dropdown-item">Our Team</a>
+                            <a href="admissions.html" class="dropdown-item">Admissions</a>
+                            <a href="fees.html" class="dropdown-item">Fees</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonials</a>
+                            <a href="gallery.html" class="dropdown-item active">Gallery</a>
+                            <a href="contact.html" class="dropdown-item">Contact</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link px-3">Contact</a>
+                    <a href="admission.html" class="btn btn-gradient ms-3">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4">School Gallery</h1>
+                    <p class="lead mb-4">Explore our collection of photos showcasing campus life, academic activities, sports events, and memorable moments at St Maliko High School Hoima.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#gallery" class="btn btn-light btn-lg rounded-pill px-4">View Gallery</a>
+                        <a href="admission.html" class="btn btn-outline-light btn-lg rounded-pill px-4">Join Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div id="gallery" class="gallery-container">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Photo Gallery</h2>
+                <p class="text-muted lead">Browse through our collection of images from various school activities and events</p>
+            </div>
+            
+            <!-- Gallery Filter -->
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All Photos</button>
+                <button class="filter-btn" data-filter="campus">Campus</button>
+                <button class="filter-btn" data-filter="academics">Academics</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+                <button class="filter-btn" data-filter="events">Events</button>
+                <button class="filter-btn" data-filter="students">Students</button>
+            </div>
+            
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Campus Images -->
+                <div class="gallery-item" data-category="campus">
+                    <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="School Campus Front View" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Campus</span>
+                        <h3 class="gallery-title">Main School Building</h3>
+                        <p class="gallery-date">Front view of our campus</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="campus">
+                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Classroom Interior" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Campus</span>
+                        <h3 class="gallery-title">Modern Classroom</h3>
+                        <p class="gallery-date">Well-equipped learning environment</p>
+                    </div>
+                </div>
+                
+                <!-- Academics Images -->
+                <div class="gallery-item" data-category="academics">
+                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Science Laboratory" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Academics</span>
+                        <h3 class="gallery-title">Science Laboratory</h3>
+                        <p class="gallery-date">Students conducting experiments</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="academics">
+                    <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Library Study Area" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Academics</span>
+                        <h3 class="gallery-title">School Library</h3>
+                        <p class="gallery-date">Quiet study environment</p>
+                    </div>
+                </div>
+                
+                <!-- Sports Images -->
+                <div class="gallery-item" data-category="sports">
+                    <img src="https://images.unsplash.com/photo-1575361204480-aadea25e6e68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Football Match" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Sports</span>
+                        <h3 class="gallery-title">Football Match</h3>
+                        <p class="gallery-date">Inter-school competition</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="sports">
+                    <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1490&q=80" alt="Netball Practice" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Sports</span>
+                        <h3 class="gallery-title">Netball Practice</h3>
+                        <p class="gallery-date">Team training session</p>
+                    </div>
+                </div>
+                
+                <!-- Events Images -->
+                <div class="gallery-item" data-category="events">
+                    <img src="https://images.unsplash.com/photo-1519861531473-920034658307?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Graduation Ceremony" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Events</span>
+                        <h3 class="gallery-title">Graduation Day</h3>
+                        <p class="gallery-date">Class of 2023 ceremony</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="events">
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cultural Day" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Events</span>
+                        <h3 class="gallery-title">Cultural Day</h3>
+                        <p class="gallery-date">Traditional dance performance</p>
+                    </div>
+                </div>
+                
+                <!-- Students Images -->
+                <div class="gallery-item" data-category="students">
+                    <img src="https://images.unsplash.com/photo-1524178234883-043d5c3f3cf4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Group Study" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Students</span>
+                        <h3 class="gallery-title">Group Study Session</h3>
+                        <p class="gallery-date">Collaborative learning</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="students">
+                    <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Student Leadership" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Students</span>
+                        <h3 class="gallery-title">Student Council</h3>
+                        <p class="gallery-date">Leadership meeting</p>
+                    </div>
+                </div>
+                
+                <!-- More Images -->
+                <div class="gallery-item" data-category="campus">
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="School Grounds" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Campus</span>
+                        <h3 class="gallery-title">School Compound</h3>
+                        <p class="gallery-date">Beautiful green environment</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="academics">
+                    <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Computer Lab" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Academics</span>
+                        <h3 class="gallery-title">Computer Laboratory</h3>
+                        <p class="gallery-date">ICT practical session</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="sports">
+                    <img src="https://images.unsplash.com/photo-1552674605-db6ffd8facb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Athletics" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Sports</span>
+                        <h3 class="gallery-title">Track & Field</h3>
+                        <p class="gallery-date">Annual sports day</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="events">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Prize Giving" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Events</span>
+                        <h3 class="gallery-title">Prize Giving Day</h3>
+                        <p class="gallery-date">Academic awards ceremony</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="load-more">
+                <button class="btn-load" id="loadMoreBtn">
+                    <i class="fas fa-images me-2"></i> Load More Photos
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-content">
+            <img class="lightbox-img" id="lightboxImg" src="" alt="">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a href="index.html" class="text-decoration-none">
+                        <div class="d-flex align-items-center mb-4">
+                            <a href="index.html" class="nav-logo">
+                                <div class="nav-logo-icon">
+                                   <img src="img/badge.jpg" alt="Profile" class="profile-image" style="width: 50px; height: 50px; border-radius: 50%;">
+                                </div>
+                            </a>
+                            <div>
+                                <h4 class="text-white mb-0">St Maliko High School</h4>
+                                <small class="text-light">Hoima, Uganda</small>
+                            </div>
+                        </div>
+                    </a>
+                    <p class="mb-4">Premier educational institution in Western Uganda offering quality O-Level and A-Level education with modern facilities and experienced staff.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-primary btn-sm rounded-circle"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="academics.html" class="text-light text-decoration-none">Academics</a></li>
+                        <li class="mb-2"><a href="sports.html" class="text-light text-decoration-none">Sports</a></li>
+                        <li><a href="gallery.html" class="text-light text-decoration-none">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-4">Contact Info</h5>
+                    <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>Hoima City, Bujumbura, Uganda</p>
+                    <p class="mb-2"><i class="fas fa-phone-alt me-2"></i>+256 779 625516</p>
+                    <p class="mb-2"><i class="fas fa-phone-alt me-2"></i>+256 777 211342</p>
+                    <p class="mb-2"><i class="fas fa-envelope me-2"></i>Smalikschoolhoima@gmail.com</p>
+                    <p><i class="fas fa-clock me-2"></i>Mon - Fri: 8:00 AM - 5:00 PM</p>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-4">Photo Submissions</h5>
+                    <p>Have photos from school events? Share them with us for inclusion in our gallery.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-primary" type="button">Submit Photos</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 St Maliko High School Hoima. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> by <a href="mailto:efitiandrew@gmail.com" class="text-light text-decoration-none">Efiti Andrew</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg rounded-circle back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Gallery Filter Functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active filter button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filterValue = btn.getAttribute('data-filter');
+                
+                // Filter gallery items
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+        
+        // Lightbox Functionality
+        const lightboxModal = document.getElementById('lightboxModal');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+        
+        let currentImageIndex = 0;
+        const galleryImages = Array.from(galleryItems);
+        
+        // Function to open lightbox
+        function openLightbox(index) {
+            currentImageIndex = index;
+            const item = galleryImages[currentImageIndex];
+            const imgSrc = item.querySelector('img').src;
+            const caption = item.querySelector('.gallery-title').textContent + ' - ' + item.querySelector('.gallery-date').textContent;
+            
+            lightboxImg.src = imgSrc;
+            lightboxCaption.textContent = caption;
+            lightboxModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Open lightbox when clicking on gallery items
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                openLightbox(index);
+            });
+        });
+        
+        // Close lightbox
+        lightboxClose.addEventListener('click', () => {
+            lightboxModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close lightbox when clicking outside the image
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal) {
+                lightboxModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Navigate lightbox
+        lightboxPrev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+            const item = galleryImages[currentImageIndex];
+            const imgSrc = item.querySelector('img').src;
+            const caption = item.querySelector('.gallery-title').textContent + ' - ' + item.querySelector('.gallery-date').textContent;
+            
+            lightboxImg.src = imgSrc;
+            lightboxCaption.textContent = caption;
+        });
+        
+        lightboxNext.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+            const item = galleryImages[currentImageIndex];
+            const imgSrc = item.querySelector('img').src;
+            const caption = item.querySelector('.gallery-title').textContent + ' - ' + item.querySelector('.gallery-date').textContent;
+            
+            lightboxImg.src = imgSrc;
+            lightboxCaption.textContent = caption;
+        });
+        
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', (e) => {
+            if (lightboxModal.classList.contains('active')) {
+                if (e.key === 'Escape') {
+                    lightboxModal.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                } else if (e.key === 'ArrowLeft') {
+                    lightboxPrev.click();
+                } else if (e.key === 'ArrowRight') {
+                    lightboxNext.click();
+                }
+            }
+        });
+        
+        // Load More Button
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        let loadedItems = 12; // Initial number of items shown
+        
+        // Hide some items initially
+        window.addEventListener('DOMContentLoaded', () => {
+            galleryItems.forEach((item, index) => {
+                if (index >= loadedItems) {
+                    item.style.display = 'none';
+                }
+            });
+        });
+        
+        loadMoreBtn.addEventListener('click', () => {
+            // Show more items
+            const hiddenItems = Array.from(galleryItems).slice(loadedItems, loadedItems + 4);
+            hiddenItems.forEach(item => {
+                item.style.display = 'block';
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'scale(1)';
+                }, 10);
+            });
+            
+            loadedItems += 4;
+            
+            // Hide button if all items are loaded
+            if (loadedItems >= galleryItems.length) {
+                loadMoreBtn.style.display = 'none';
+                loadMoreBtn.innerHTML = '<i class="fas fa-check me-2"></i> All Photos Loaded';
+                setTimeout(() => {
+                    loadMoreBtn.style.display = 'inline-block';
+                }, 1500);
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
